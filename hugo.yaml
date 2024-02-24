@@ -11,11 +11,18 @@ languages:
       category: categories
       tag: tags
       series: series
-    menu:
-      main:
-        - name: Search
-          url: search/
-          weight: 10
+
+menu:
+  main:
+    - name: Search
+      url: search/
+      weight: 10
+    - name: Projects
+      url: projects/
+      weight: 9
+    - name: CV
+      url: cv/
+      weight: 1
 
 outputs:
   home:
