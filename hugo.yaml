@@ -1,0 +1,46 @@
+baseURL: https://lieflundmark.com/
+languageCode: en-au
+title: Lief Lundmark
+theme: [PaperMod]
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Search
+          url: search/
+          weight: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+params:
+  homeInfoParams:
+    Title: Hi!
+    Content: "I'm Lief, currently a medical student at [UQ](https://www.uq.edu.au/). I have an interest (and a bachelor's degree) in pure maths and physics, and I like to code in my spare time. I also co-host a D&D podcast, [Level Down!](https://linktr.ee/leveldown). I like reading, hiking and photography.
+    \n\n
+    This website is currently under construction - check back soon!"
+  ShowShareButtons: false
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+
+  socialIcons: # optional
+    - name: "Github"
+      url: "https://github.com/leafthelegend"
+    - name: "Email"
+      url: "mailto:lieflundmarkaitcheson@gmail.com"
