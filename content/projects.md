@@ -6,3 +6,6 @@ layout: "projects"
 # description: "Description for Search"
 summary: "Some of my projects."
 ***REMOVED***
+ - 1
+ - 2
+ - 3
