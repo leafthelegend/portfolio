@@ -135,10 +135,19 @@
     <ul class="post-tags">
     </ul>
 
-  </footer><script src="https://utteranc.es/client.js"
-        repo="leafthelegend/website-comments"
-        issue-term="pathname"
-        theme="preferred-color-scheme"
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="leafthelegend/website-comments"
+        data-repo-id="R_kgDOLXjVgg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLXjVgs4Cdfdw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_gray"
+        data-lang="en"
+        data-loading="lazy"
         crossorigin="anonymous"
         async>
 </script>
@@ -202,13 +211,28 @@
 
 </script>
 <script>
+    function sendMessage(message) {
+        const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
+            sendMessage({
+                setConfig: {
+                    theme: 'noborder_light'
+                }
+            });
         } else {
             document.body.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
+            sendMessage({
+                setConfig: {
+                    theme: 'noborder_gray'
+                }
+            });
         }
     })
 
