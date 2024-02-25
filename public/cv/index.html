@@ -60,12 +60,32 @@
 
 <body class="" id="top">
 <script>
+    function sendMessage(message) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
+        sendMessage({
+                setConfig: {
+                    theme: 'noborder_gray'
+                }
+            });
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        sendMessage({
+                setConfig: {
+                    theme: 'noborder_light'
+                }
+            });
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        sendMessage({
+                setConfig: {
+                    theme: 'noborder_gray'
+                }
+            });
     }
 
 </script>
@@ -145,7 +165,7 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="noborder_gray"
+        data-theme="https://cdn.jsdelivr.net/gh/leafthelegend/portfolio/static/comments.css"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -212,7 +232,7 @@
 </script>
 <script>
     function sendMessage(message) {
-        const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+        const iframe = document.querySelector('iframe.giscus-frame');
         if (!iframe) return;
         iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
     }
