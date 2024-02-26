@@ -1,0 +1,17 @@
+<div class = "cventry">
+
+    {{ if .Get "title" }}
+    <div class = "cventryheader">
+        <div class = "cventryheaderleft">
+            <h3>{{ .Get "title"}}</h3>
+            <em>{{ .Get "subtitle"}}</em>
+        </div>
+        <div class = "cventryheaderright">
+            {{ .Get "date"}}<br>
+            <em>{{ .Get "location"}}</em>
+        </div>
+    </div>
+    {{end}}
+
+    {{ .Inner }}
+</div>

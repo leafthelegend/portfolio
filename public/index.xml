@@ -16,18 +16,21 @@
       <description>When I have something to say, this is how I&amp;rsquo;ll say it.</description>
     </item>
     <item>
-      <title>Coming soon</title>
+      <title>My Resume</title>
       <link>http://localhost:1313/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/cv/</guid>
-      <description>My CV.</description>
+      <description>Education University of Queensland Doctor of Medicine 2024 - 2028
+Brisbane, QLD Currently in Year 1 University of Queensland Bachelor of Mathematics 2021 - 2023
+Brisbane, QLD Majoring in Pure Mathematics with a minor in Physics GPA 6.7 St Peters Lutheran College International Baccalaureate 2019 - 2020
+Brisbane, QLD Higher Level Mathematics, Physics and Chemistry Diploma Score 43, ATAR Equivalent 99.65 Experience UQ Tutoring Tutoring first and second year maths and computer science courses 2021 - Present</description>
     </item>
     <item>
-      <title>Coming soon</title>
+      <title>Projects</title>
       <link>http://localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/</guid>
-      <description>Some of my projects.</description>
+      <description></description>
     </item>
   </channel>
 </rss>

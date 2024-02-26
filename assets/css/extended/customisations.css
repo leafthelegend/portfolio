@@ -1,0 +1,6 @@
+.main {
+    max-width: calc(var(--main-width) + var(--gap) * 7);
+}
+.main:has(.cv-page) {
+    max-width: calc(var(--main-width) + var(--gap) * 13);
+}

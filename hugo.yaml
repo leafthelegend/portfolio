@@ -17,10 +17,10 @@ menu:
     - name: Search
       url: search/
       weight: 10
-    - name: Projects
-      url: projects/
-      weight: 9
-    - name: CV
+    # - name: Projects
+    #   url: projects/
+    #   weight: 9
+    - name: Resume
       url: cv/
       weight: 1
 
