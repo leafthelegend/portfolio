@@ -1,0 +1,248 @@
+<head>
+    <style>
+        .quiz-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #start-quiz {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        .quiz-question {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .MCQ-answer {
+            margin: 10px;
+        }
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 1em;
+            height: 1em;
+            border: 2px solid #4CAF50;
+            border-radius: 50%;
+            outline: none;
+            transition: 0.3s;
+            transform: translateY(-0.54em);
+            display: grid;
+            place-content: center;
+        }
+
+        input[type="radio"]::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--form-control-color);
+            background-color: #4CAF50;
+          }
+
+          input[type="radio"]:checked::before {
+            transform: scale(1);
+          }
+        .next-question {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: 120ms;
+            border-radius: 7px;
+        }
+        .next-question.disabled {
+            background-color: grey;
+            pointer-events: none;
+        }
+        .hidden {
+            display: none;
+        }
+        .quiz-options label{
+            line-height: 1.1;
+            display: grid;
+            grid-template-columns: 2em auto;
+            gap: 0.5em;
+        }
+    </style>
+</head>
+<div class="quiz-container">
+    <div id = "start-quiz-container">
+        <button id = "start-quiz">Start Quiz</button>
+    </div>
+    <div class="quiz-question hidden" id = "question1">
+        <div class = "quiz-options">
+            <p>What medical specialty most interests you?</p>
+            <label><input class = "MCQ-answer" type="radio" name="q1" value="1,2,0,0"> Surgery</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="q1" value="0,0,1,2"> General Practice</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="q1" value="2,1,0,0"> Emergency Medicine</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="q1" value="0,0,2,1"> Internal Medicine</label><br>
+        </div>
+        <button id="next-question1" class = "next-question disabled">Next</button>
+    </div>
+    <div class="quiz-question hidden" id = "question2">
+        <div class = "quiz-options">
+            <p>Which game would you rather play?</p>
+            <label><input class = "MCQ-answer" type="radio" name="q2" value="0,1,1,0"> Chess</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="q2" value="1,0,0,1"> Uno</label><br>
+        </div>
+        <button id="next-question2" class = "next-question disabled">Next</button>
+    </div>
+    <div class="quiz-question hidden" id = "question3">
+        <div class = "quiz-options">
+            <p>Have you ever used a dating app?</p>
+            <label><input class = "MCQ-answer" type="radio" name="q3" value="0,0,2,2"> Yes</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="q3" value="0,0,0,0"> No</label><br>
+        </div>
+        <button id="next-question3" class = "next-question disabled">Next</button>
+    </div>
+    <div class="quiz-question hidden" id = "tiebreak1">
+        <div class = "quiz-options">
+            <p>Are you easily distracted?</p>
+            <label><input class = "MCQ-answer" type="radio" name="t1" value="0,0,0,1"> Yes</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="t1" value="0,0,1,0"> No</label><br>
+        </div>
+        <button id="next-question4" class = "next-question disabled">Next</button>
+    </div>
+    <div class="quiz-question hidden" id = "tiebreak2">
+        <div class = "quiz-options">
+            <p>You've just finished all this week's work. What do you do next?</p>
+            <label><input class = "MCQ-answer" type="radio" name="t2" value="0,0,1,1"> Get a headstart on next week's tasks</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="t2" value="1,1,0,0"> Take the weekend off</label><br>
+        </div>
+        <button id="next-question5" class = "next-question disabled">Next</button>
+    </div>
+    <div class="quiz-question hidden" id = "tiebreak3">
+        <div class = "quiz-options">
+            <p>Which vehicle would you rather ride?</p>
+            <label><input class = "MCQ-answer" type="radio" name="t3" value="1,0,0,0"> A bulldozer</label><br>
+            <label><input class = "MCQ-answer" type="radio" name="t3" value="0,1,0,0"> A motorcycle</label><br>
+        </div>
+        <button id="next-question6" class = "next-question disabled">Next</button>
+    </div>
+    <div class="results hidden" id = "cas3">
+        <p style="font-size: 2em; font-weight: bold;">You are Cas3!</p>
+        Cas3 is similar to the famous Cas9, in that it targets and cleaves a specific site on double-stranded DNA. The enzyme first searches for a short sequence downstream of the target site, known as a protospacer adjacent motif (PAM). Once it locates the PAM, it unwinds the DNA to match it against a guide RNA molecule. <br>
+        Unlike Cas9, when a match is found Cas3 does not make a single clean double-stranded break. Instead, it begins ripping up long sections of DNA, wiping out entire sections of the genome in one fell swoop. Cas3 works tirelessy, but with no particular strategy. It has great potential for large-scale gene knockouts, but is considerably more unwieldy than Cas9.
+    </div>
+    <div class="results hidden" id = "cas9">
+        <p style="font-size: 2em; font-weight: bold;">You are Cas9!</p>
+        Cas9 is the poster child of the CRISPR revolution. It targets double-stranded DNA by first searching for a short three-base sequence downstream of the target site, known as a protospacer adjacent motif (PAM). Once it locates the PAM, it unwinds the DNA to match it against a guide RNA molecule. If a match is found, Cas9 precisely cuts the DNA to cause a double-stranded break. The repair process presents an opportunity to introduce new DNA and modify the genome. <br>
+        Cas9 is precise, fast and versatile. Unlike Cas12 and Cas13, it cleaves a single strand in one place, focusing only on this specific task.
+    </div>
+    <div class="results hidden" id = "cas12">
+        <p style="font-size: 2em; font-weight: bold;">You are Cas12!</p>
+        Cas12 and its colleague Cas13 have the potential to revolutionise diagnostic tests. This is because these enzymes demonstrate <em>promiscuous cleavage</em>: once bound to their target site they are not content to cleave only their target strand, but will instead begin eagerly and non-specifically cleaving any nuclear material which happens to float past. This provides a straightforward way to detect if Cas12 has found its target - simply add small fragments of RNA containing a fluorescent compound. Then when Cas12 starts cleaving indiscriminately, it cuts off the head of these reporter molecules and they light up. Just like feeding fireworks into a paper shredder.<br>
+        Unlike Cas13, Cas12 searches for a short sequence called a protospacer-adjacent motif (PAM) downstream of its target site. This make Cas12 more focused and efficient. Cas12 is strategic when finding its target, but once bound it cleaves everything in sight.
+    </div>
+    <div class="results hidden" id = "cas13">
+        <p style="font-size: 2em; font-weight: bold;">You are Cas13!</p>
+        Cas13 and its colleague Cas12 have the potential to revolutionise diagnostic tests. This is because these enzymes demonstrate <em>promiscuous cleavage</em>: once bound to their target site they are not content to cleave only their target strand, but will instead begin eagerly and non-specifically cleaving any nuclear material which happens to float past. This provides a straightforward way to detect if Cas13 has found its target - simply add small fragments of RNA containing a fluorescent compound. Then when Cas13 starts cleaving indiscriminately, it cuts off the head of these reporter molecules and they light up. Just like feeding fireworks into a paper shredder.<br>
+        Unlike most other Cas proteins, Cas13 does not require a proto-spacer adjacent motif (PAM) to be present next to its target sequence. This makes Cas13 more versatile but with an increased risk of off-target activity.
+    </div>
+</div>
+<script>
+    document.getElementById("start-quiz").addEventListener("click", function() {
+        document.getElementById("question1").classList.remove("hidden");
+        document.getElementById("start-quiz-container").classList.add("hidden");
+    });
+    answers = []
+    function initQuestion(i){
+        document.getElementById("next-question"+i).addEventListener("click", function() {
+            answers.push(document.querySelector('input[name="q'+i+'"]:checked').value);
+            document.getElementById("question"+i).classList.add("hidden");
+            if (i == 3){
+                resolve();
+            }
+            else{
+                document.getElementById("question"+(i+1)).classList.remove("hidden");
+            }
+        });
+        //make the options undisable the next question button
+        document.querySelectorAll('input[name="q'+i+'"]').forEach((input) => {
+            input.addEventListener("change", function() {
+                document.getElementById("next-question"+i).classList.remove("disabled");
+            });
+        });
+    }
+    initQuestion(1);
+    initQuestion(2);
+    initQuestion(3);
+
+    function initTiebreak(i){
+        document.getElementById("next-question"+(i+3)).addEventListener("click", function() {
+            answers.push(document.querySelector('input[name="t'+i+'"]:checked').value);
+            elem = document.getElementById("tiebreak"+i)
+            console.log(elem.classList)
+            elem.classList.add("hidden");
+            console.log(elem.classList);
+            resolve();
+        });
+        //make the options undisable the next question button
+        document.querySelectorAll('input[name="t'+i+'"]').forEach((input) => {
+            input.addEventListener("change", function() {
+                document.getElementById("next-question"+(i+3)).classList.remove("disabled");
+            });
+        });
+    }
+    initTiebreak(1);
+    initTiebreak(2);
+    initTiebreak(3);
+
+    function resolve(){
+        scores = [0,0,0,0]
+        caskey = [3,9,12,13]
+        for (a of answers){
+            a = a.split(",");
+            for (i in a){
+                scores[i] += parseInt(a[i]);
+            }
+        }
+        console.log(answers)
+        console.log(scores)
+        // check if there's a tie
+        max = Math.max(...scores);
+        if (scores.filter((s) => s == max).length > 1){
+            //determine between which indices the tiebreak is
+            tiebreaks = []
+            for (i in scores){
+                if (scores[i] == max){
+                    tiebreaks.push(i);
+                }
+            }
+
+            if (tiebreaks[0] == '0' && tiebreaks[1] == '1'){
+                document.getElementById("tiebreak3").classList.remove("hidden");
+            }
+            else if (tiebreaks.includes('1') && tiebreaks.includes('2') || tiebreaks.includes('0') && tiebreaks.includes('3')){
+                document.getElementById("tiebreak2").classList.remove("hidden");
+            }
+            else if (tiebreaks.includes('2') && tiebreaks.includes('3')){
+                document.getElementById("tiebreak1").classList.remove("hidden");
+            }
+        }
+        else{
+            document.getElementById("cas"+(caskey[scores.indexOf(max)])).classList.remove("hidden");
+        }
+    }
+</script>

@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A Blog Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <title>Which Cas are you?</title>
+      <link>http://localhost:1313/posts/which-cas-are-you/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>When I have something to say, this is how I&amp;rsquo;ll say it.</description>
+      <guid>http://localhost:1313/posts/which-cas-are-you/</guid>
+      <description>Researchers have discovered a dazzling array of Cas proteins with exciting clinical applications. Take this quick quiz to find out which one you are!</description>
     </item>
     <item>
       <title>My Resume</title>
