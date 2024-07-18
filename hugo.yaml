@@ -30,7 +30,7 @@ outputs:
     - RSS
     - JSON
 params:
-  comments: true
+  comments: false
   homeInfoParams:
     Title: Hi!
     Content: "I'm Lief, currently a medical student at [UQ](https://www.uq.edu.au/). I have an interest (and a bachelor's degree) in pure maths and physics, and I like to code in my spare time. I also co-host a D&D podcast, [Level Down!](https://linktr.ee/leveldown). I like reading, hiking and photography."

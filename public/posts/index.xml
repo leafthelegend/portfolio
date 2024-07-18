@@ -4,7 +4,7 @@
     <title>Posts on Lief Lundmark</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Lief Lundmark</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.123.3</generator>
     <language>en</language>
     <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
